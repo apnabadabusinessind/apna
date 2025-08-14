@@ -1,1 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaBadaBusinessInd - Grow Your Business, Grow Your Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #334155;
+            background-color: #f1f5f9;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+        
+        .navbar-brand span {
+            color: var(--primary);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary);
+            color: var(--primary);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.1);
+            top: -150px;
+            right: -100px;
+        }
+        
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(245, 158, 11, 0.1);
+            bottom: -100px;
+            left: -50px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-bottom: 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .section-title h2 {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #475569;
+            margin: 20px 0;
+        }
+        
+        .client-name {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+        
+        .client-position {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+            padding: 60px 0;
+            color: white;
+            border-radius: 20px;
+        }
+        
+        .newsletter h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            outline: none;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .team-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 20px;
+        }
+        
+        .service-card {
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .case-study {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .case-img {
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .case-content {
+            padding: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            color: #64748b;
+            font-size: 1rem;
+        }
+        
+        .blog-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-date {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+        
+        .contact-form {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-control {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
+        }
+        
+        .booking-form {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .calendar-icon {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #64748b;
+        }
+        
+        .faq-item {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            color: #475569;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-title {
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            display: block;
+            margin-bottom: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 50px;
+            text-align: center;
+            color: #94a3b8;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Apna<span>Bada</span>Business</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="#book-consultation" class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1>Grow Your Business, <br>Grow Your Future</h1>
+                    <p>We empower entrepreneurs with proven strategies to scale their businesses. Transform your vision into a thriving enterprise with our expert guidance.</p>
+                    <div class="hero-buttons">
+                        <a href="#book-consultation" class="btn btn-primary">Book Free Consultation</a>
+                        <a href="#services" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid rounded-3 shadow" alt="Business Growth">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlights -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center p-4">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h5 class="card-title">Growth Strategy</h5>
+                        <p>Customized plans to accelerate your business growth and increase market share.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center p-4">
+                        <i class="fas fa-bullhorn card-icon"></i>
+                        <h5 class="card-title">Marketing & Branding</h5>
+                        <p>Build a powerful brand that resonates with your target audience.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center p-4">
+                        <i class="fas fa-handshake card-icon"></i>
+                        <h5 class="card-title">Sales Training</h5>
+                        <p>Transform your sales team into high-performing revenue generators.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card text-center p-4">
+                        <i class="fas fa-lightbulb card-icon"></i>
+                        <h5 class="card-title">Startup Guidance</h5>
+                        <p>From idea to execution, we guide startups to sustainable success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Our journey, mission, and the team behind your success</p>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Our Story</h3>
+                    <p>Founded in 2015, ApnaBadaBusinessInd began with a simple mission: to help small and medium businesses overcome growth challenges. Our founder, Rajesh Sharma, noticed that many promising businesses struggled not because of their products, but due to lack of strategic direction.</p>
+                    <p>Today, we've grown into a team of 25+ experts who have helped over 500 businesses achieve sustainable growth. Our approach combines data-driven strategies with practical implementation guidance.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid rounded-3 shadow" alt="Our Team">
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm">
+                        <i class="fas fa-eye fa-2x mb-3 text-primary"></i>
+                        <h4>Our Vision</h4>
+                        <p>To become the catalyst for 10,000 successful businesses by 2030, creating economic opportunities across India.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm">
+                        <i class="fas fa-bullseye fa-2x mb-3 text-primary"></i>
+                        <h4>Our Mission</h4>
+                        <p>Empower entrepreneurs with actionable strategies, practical knowledge, and continuous support to build scalable businesses.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-center p-4 bg-white rounded-3 shadow-sm">
+                        <i class="fas fa-gem fa-2x mb-3 text-primary"></i>
+                        <h4>Core Values</h4>
+                        <p>Integrity, Excellence, Innovation, Collaboration, and Client Success drive everything we do.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-center mb-4">Meet Our Leadership Team</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="team-img" alt="Rajesh Sharma">
+                        <h5>Rajesh Sharma</h5>
+                        <p>Founder & CEO</p>
+                        <p>20+ years in business strategy</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="team-img" alt="Priya Patel">
+                        <h5>Priya Patel</h5>
+                        <p>Marketing Director</p>
+                        <p>Ex-Flipkart marketing lead</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="team-img" alt="Amit Kumar">
+                        <h5>Amit Kumar</h5>
+                        <p>Sales Strategist</p>
+                        <p>Generated ₹500cr+ in sales</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-member">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="team-img" alt="Neha Singh">
+                        <h5>Neha Singh</h5>
+                        <p>Finance Expert</p>
+                        <p>Chartered Accountant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Business Growth Services</h2>
+                <p>Comprehensive solutions to scale your business</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-chess service-icon"></i>
+                        <h4>Business Growth Strategy</h4>
+                        <p>Customized 3-5 year growth roadmap with quarterly milestones, market analysis, and competitive positioning.</p>
+                        <ul class="mb-4">
+                            <li>Market penetration strategies</li>
+                            <li>New market entry plans</li>
+                            <li>Product diversification</li>
+                            <li>Strategic partnerships</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-bullhorn service-icon"></i>
+                        <h4>Marketing & Branding</h4>
+                        <p>360-degree marketing solutions to build brand recognition and generate qualified leads.</p>
+                        <ul class="mb-4">
+                            <li>Digital marketing strategy</li>
+                            <li>Brand identity development</li>
+                            <li>Content marketing</li>
+                            <li>Social media campaigns</li>
+                            <li>SEO & SEM</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-handshake service-icon"></i>
+                        <h4>Sales Training & Lead Generation</h4>
+                        <p>Transform your sales team into high-performers and build a sustainable lead pipeline.</p>
+                        <ul class="mb-4">
+                            <li>Sales process optimization</li>
+                            <li>CRM implementation</li>
+                            <li>Lead generation systems</li>
+                            <li>Sales team training</li>
+                            <li>Performance metrics</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-rocket service-icon"></i>
+                        <h4>Startup Guidance</h4>
+                        <p>From idea validation to scaling, we help startups navigate the complex business landscape.</p>
+                        <ul class="mb-4">
+                            <li>Business model development</li>
+                            <li>Investor pitch preparation</li>
+                            <li>MVP development guidance</li>
+                            <li>Early-stage marketing</li>
+                            <li>Operational setup</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-chart-pie service-icon"></i>
+                        <h4>Financial Planning</h4>
+                        <p>Strategic financial management to optimize resources and fuel growth.</p>
+                        <ul class="mb-4">
+                            <li>Financial forecasting</li>
+                            <li>Budget optimization</li>
+                            <li>Funding strategy</li>
+                            <li>Cash flow management</li>
+                            <li>Profitability analysis</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <i class="fas fa-users service-icon"></i>
+                        <h4>Operational Excellence</h4>
+                        <p>Streamline operations to reduce costs, improve efficiency, and enhance customer experience.</p>
+                        <ul class="mb-4">
+                            <li>Process optimization</li>
+                            <li>Supply chain management</li>
+                            <li>Quality control systems</li>
+                            <li>Team productivity</li>
+                            <li>Technology implementation</li>
+                        </ul>
+                        <a href="#book-consultation" class="btn btn-outline-primary">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Businesses Transformed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">₹2500Cr+</div>
+                    <div class="stat-label">Revenue Generated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Industry Experts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Real businesses, real results</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="case-study">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid case-img" alt="Case Study">
+                        <div class="case-content">
+                            <h4>Textile Manufacturer Doubles Revenue</h4>
+                            <p>Traditional textile business struggling with declining orders and increased competition.</p>
+                            <div class="d-flex mb-3">
+                                <div class="bg-danger text-white px-3 py-1 rounded me-3">Before</div>
+                                <p class="mb-0">₹12Cr revenue | 15% profit margin</p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-success text-white px-3 py-1 rounded me-3">After</div>
+                                <p class="mb-0">₹28Cr revenue | 27% profit margin</p>
+                            </div>
+                            <p>We helped them develop an export strategy, optimize operations, and implement digital marketing to reach international buyers.</p>
+                            <a href="#" class="btn btn-outline-primary">Read Full Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="case-study">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="img-fluid case-img" alt="Case Study">
+                        <div class="case-content">
+                            <h4>Food Tech Startup Secures Funding</h4>
+                            <p>Innovative food delivery concept struggling to attract investors.</p>
+                            <div class="d-flex mb-3">
+                                <div class="bg-danger text-white px-3 py-1 rounded me-3">Before</div>
+                                <p class="mb-0">0 investors | No clear business model</p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="bg-success text-white px-3 py-1 rounded me-3">After</div>
+                                <p class="mb-0">₹8.5Cr funding | 5-city expansion</p>
+                            </div>
+                            <p>We refined their pitch, developed financial projections, and connected them with relevant investors.</p>
+                            <a href="#" class="btn btn-outline-primary">Read Full Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">View All Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Success stories from businesses we've helped grow</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-img" alt="Client">
+                            <div>
+                                <div class="client-name">Ananya Desai</div>
+                                <div class="client-position">CEO, CraftConnect</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            "Working with ApnaBadaBusiness transformed our approach to marketing. We've seen a 300% increase in qualified leads within just 6 months!"
+                        </div>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-img" alt="Client">
+                            <div>
+                                <div class="client-name">Vikram Mehta</div>
+                                <div class="client-position">Founder, AgroSolutions</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            "Their financial planning expertise helped us secure funding and optimize our cash flow. We've doubled our production capacity without increasing debt."
+                        </div>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="testimonial-img" alt="Client">
+                            <div>
+                                <div class="client-name">Sanjay Patel</div>
+                                <div class="client-position">Director, TechNovate</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-text">
+                            "The sales training program completely transformed our team. Our conversion rates improved by 45% and average deal size increased by 30%."
+                        </div>
+                        <div class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Resources -->
+    <section id="blog" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resources & Insights</h2>
+                <p>Latest articles, tips, and business growth strategies</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid blog-img" alt="Blog">
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar me-2"></i>June 15, 2023</div>
+                            <h4>5 Marketing Strategies That Work in 2023</h4>
+                            <p>Discover the most effective marketing approaches for the current business landscape.</p>
+                            <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid blog-img" alt="Blog">
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar me-2"></i>May 28, 2023</div>
+                            <h4>Financial Planning for Rapid Growth</h4>
+                            <p>How to manage finances when scaling your business to avoid cash flow problems.</p>
+                            <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="img-fluid blog-img" alt="Blog">
+                        <div class="blog-content">
+                            <div class="blog-date"><i class="far fa-calendar me-2"></i>May 10, 2023</div>
+                            <h4>The Ultimate Guide to Sales Team Training</h4>
+                            <p>Transform your sales team into high performers with these proven techniques.</p>
+                            <a href="#" class="btn btn-link ps-0">Read More <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-primary">View All Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h3>Stay Updated with Business Insights</h3>
+                        <p>Subscribe to our newsletter for the latest growth strategies, industry trends, and exclusive offers.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="newsletter-form">
+                            <input type="email" class="form-control" placeholder="Your Email Address">
+                            <button class="btn btn-light">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our business growth experts</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Our Information</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <div>
+                                <h5>Address</h5>
+                                <p>Business Tower, 4th Floor<br>MG Road, Mumbai 400001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <div>
+                                <h5>Phone</h5>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>contact@apnabadabusiness.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <i class="fab fa-whatsapp contact-icon"></i>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <p>+91 98765 43210</p>
+                                <a href="#" class="btn btn-success mt-2"><i class="fab fa-whatsapp me-2"></i> Chat Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Business Hours</h5>
+                            <p>Monday-Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="contact-form">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control">
+                                    <option>Select Service</option>
+                                    <option>Business Growth Strategy</option>
+                                    <option>Marketing & Branding</option>
+                                    <option>Sales Training</option>
+                                    <option>Startup Guidance</option>
+                                    <option>Financial Planning</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Consultation -->
+    <section id="book-consultation" class="py-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book a Consultation</h2>
+                <p>Schedule a free 30-minute strategy session with our experts</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="booking-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="Select Date" id="datePicker">
+                                        <i class="far fa-calendar calendar-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control">
+                                    <option>Select Preferred Time</option>
+                                    <option>9:00 AM - 10:00 AM</option>
+                                    <option>11:00 AM - 12:00 PM</option>
+                                    <option>2:00 PM - 3:00 PM</option>
+                                    <option>4:00 PM - 5:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-control">
+                                    <option>Select Consultation Type</option>
+                                    <option>Business Growth Strategy</option>
+                                    <option>Marketing & Branding</option>
+                                    <option>Sales Training</option>
+                                    <option>Startup Guidance</option>
+                                    <option>Financial Planning</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control" rows="3" placeholder="Briefly describe your business challenges"></textarea>
+                            </div>
+                            
+                            <h5 class="mb-3">Payment Method</h5>
+                            <div class="d-flex gap-3 mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="razorpay">
+                                    <label class="form-check-label" for="razorpay">
+                                        <img src="https://razorpay.com/assets/razorpay-glyph.svg" height="24" alt="Razorpay" class="ms-2">
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="upi">
+                                    <label class="form-check-label" for="upi">
+                                        UPI
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment" id="paypal">
+                                    <label class="form-check-label" for="paypal">
+                                        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" alt="PayPal" class="ms-2">
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Book Consultation (₹499)</button>
+                                <p class="text-muted mt-2">* Free for first-time clients</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long does it take to see results from your business growth strategies?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            The timeline for seeing results varies based on your business size, industry, and the specific strategies implemented. Most clients start seeing measurable improvements within 3-6 months. We focus on both short-term wins and sustainable long-term growth.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What makes your approach different from other business consultants?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Our approach combines three key elements: 1) Deep industry-specific knowledge, 2) Practical implementation support beyond just strategy, and 3) Customized solutions rather than one-size-fits-all templates. We become true partners in your growth journey.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you work with startups or only established businesses?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We work with businesses at all stages - from pre-revenue startups to established companies looking to scale. About 40% of our clients are startups, 40% are small to medium businesses, and 20% are larger enterprises seeking transformation.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What industries do you specialize in?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We have expertise across multiple sectors including technology, manufacturing, retail, healthcare, education, and professional services. Our team includes specialists with deep experience in specific industries to provide relevant insights.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How are your fees structured?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We offer flexible engagement models: 1) Project-based pricing for specific initiatives, 2) Retainer model for ongoing support, and 3) Performance-based fees tied to achieving specific growth milestones. During our initial consultation, we'll recommend the best model for your needs.
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What if I need help with implementation, not just strategy?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Implementation support is built into all our engagements. Unlike traditional consultants who just deliver reports, we provide hands-on assistance with execution, including training your team, setting up systems, and providing ongoing guidance.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="footer-title">ApnaBadaBusiness</h4>
+                    <p class="mb-4">Empowering businesses to achieve sustainable growth through strategic guidance and practical implementation support.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About Us</a>
+                        <a href="#services">Services</a>
+                        <a href="#case-studies">Case Studies</a>
+                        <a href="#blog">Resources</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">Our Services</h4>
+                    <div class="footer-links">
+                        <a href="#">Business Growth Strategy</a>
+                        <a href="#">Marketing & Branding</a>
+                        <a href="#">Sales Training</a>
+                        <a href="#">Startup Guidance</a>
+                        <a href="#">Financial Planning</a>
+                        <a href="#">Operational Excellence</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="footer-links">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Business Tower, MG Road, Mumbai</p>
+                        <p><i class="fas fa-phone-alt me-2"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope me-2"></i> contact@apnabadabusiness.com</p>
+                        <p><i class="fab fa-whatsapp me-2"></i> +91 98765 43210</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ApnaBadaBusinessInd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (faqItem.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
