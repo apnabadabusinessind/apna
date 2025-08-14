@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaBadaBusinessInd - Grow Your Business, Grow Your Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0ea5e9;
+            --accent: #f97316;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f9fafb;
+            line-height: 1.6;
+        }
+        
+        .hindi-text {
+            font-family: 'Hind', sans-serif;
+            font-weight: 500;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .navbar-brand span {
+            color: var(--accent);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 0.5rem;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(14, 165, 233, 0.9) 100%), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid white;
+            color: white;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            margin: 1rem;
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(37, 99, 235, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .client-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+        
+        .newsletter {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 15px;
+            padding: 3rem;
+            color: white;
+        }
+        
+        .newsletter .form-control {
+            padding: 1rem;
+            border-radius: 50px 0 0 50px;
+            border: none;
+        }
+        
+        .newsletter .btn {
+            border-radius: 0 50px 50px 0;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            border: none;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .team-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .case-study-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .case-study-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stats-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .blog-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-right: 1rem;
+        }
+        
+        .booking-form {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .payment-option {
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-option:hover, .payment-option.active {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+        
+        .payment-logo {
+            width: 50px;
+            margin-right: 1rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-title:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="hindi-text">अपना</span>Bada<span class="hindi-text">बिज़नेस</span>Ind
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">होम</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">हमारे बारे में</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">सेवाएं</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#case-studies">सफलता की कहानियाँ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">संसाधन</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">संपर्क करें</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white" href="#book">परामर्श बुक करें</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hindi-text">अपना बड़ा बिज़नेस इंडिया</h1>
+            <p class="hindi-text">अपने व्यवसाय को बढ़ाएं, अपना भविष्य बढ़ाएं</p>
+            <div class="mt-4">
+                <a href="#book" class="btn btn-primary me-2"><i class="fas fa-calendar-check me-2"></i>परामर्श बुक करें</a>
+                <a href="#services" class="btn btn-outline-light"><i class="fas fa-info-circle me-2"></i>और जानें</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4 hindi-text">व्यवसाय वृद्धि में विशेषज्ञ</h2>
+                    <p class="hindi-text">अपना बड़ा बिज़नेस इंडिया भारतीय उद्यमियों और व्यवसायों को उनकी पूर्ण क्षमता तक पहुँचने में सहायता करने के लिए समर्पित है। हमारी टीम अनुभवी पेशेवरों से बनी है जो आपको विकास रणनीतियाँ, विपणन समाधान और वित्तीय योजना प्रदान करती है।</p>
+                    <p class="hindi-text">हमारा मिशन छोटे और मध्यम व्यवसायों को स्केल करने और दीर्घकालिक सफलता प्राप्त करने के लिए आवश्यक उपकरण और ज्ञान प्रदान करना है।</p>
+                    <a href="#about" class="btn btn-outline-primary mt-3 hindi-text">हमारी कहानी</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="border p-3 rounded" style="background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Business Growth" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title hindi-text">हमारी सेवाएं</h2>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="hindi-text">व्यापार वृद्धि रणनीति</h4>
+                        <p class="hindi-text">अनुकूलित विकास योजनाएँ जो आपके व्यवसाय को नए स्तर पर ले जाएंगी।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4 class="hindi-text">विपणन और ब्रांडिंग</h4>
+                        <p class="hindi-text">आपकी ब्रांड पहचान बनाने और ग्राहकों तक पहुँचने के लिए रचनात्मक समाधान।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="hindi-text">बिक्री प्रशिक्षण</h4>
+                        <p class="hindi-text">अधिक लीड और रूपांतरण उत्पन्न करने के लिए आपकी बिक्री टीम को प्रशिक्षित करें।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="hindi-text">स्टार्टअप मार्गदर्शन</h4>
+                        <p class="hindi-text">अपना व्यवसाय शुरू करने और बढ़ाने के लिए विशेषज्ञ सलाह।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <h4 class="hindi-text">वित्तीय योजना</h4>
+                        <p class="hindi-text">लाभप्रदता और स्थिरता सुनिश्चित करने के लिए वित्तीय रणनीतियाँ।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 class="hindi-text">डिजिटल परिवर्तन</h4>
+                        <p class="hindi-text">अपने व्यवसाय को डिजिटल युग के लिए तैयार करने में सहायता।</p>
+                        <a href="#" class="btn btn-sm btn-outline-primary mt-3 hindi-text">और जानें</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title hindi-text">संतुष्ट ग्राहक</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="hindi-text">"अपना बड़ा बिज़नेस इंडिया की रणनीतियों ने हमारे व्यवसाय को एक साल में 200% वृद्धि दर्ज करने में मदद की। उनकी टीम अद्भुत है!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0 hindi-text">राजेश शर्मा</h5>
+                                <p class="text-muted mb-0 hindi-text">शर्मा टेक्सटाइल्स</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="hindi-text">"स्टार्टअप मार्गदर्शन कार्यक्रम ने हमें अपने व्यवसाय को शून्य से हीरो तक ले जाने में मदद की। अत्यधिक अनुशंसित!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0 hindi-text">प्रिया पटेल</h5>
+                                <p class="text-muted mb-0 hindi-text">ग्रीन ऑर्गेनिक्स</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card">
+                        <p class="hindi-text">"वित्तीय योजना सेवा ने हमारे नकदी प्रवाह को अनुकूलित किया और लाभप्रदता में 40% वृद्धि की। धन्यवाद टीम!"</p>
+                        <div class="d-flex align-items-center mt-4">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client" class="client-img">
+                            <div class="ms-3">
+                                <h5 class="mb-0 hindi-text">विकास मेहता</h5>
+                                <p class="text-muted mb-0 hindi-text">मेहता होम डेकोर</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="newsletter">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h3 class="text-white hindi-text">हमारे व्यापार टिप्स प्राप्त करें</h3>
+                        <p class="text-white-50 hindi-text">व्यापार वृद्धि रणनीतियों, विपणन युक्तियों और विशेष ऑफ़र के बारे में नवीनतम जानकारी प्राप्त करने के लिए सदस्यता लें।</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="आपका ईमेल पता" aria-label="Email">
+                                <button class="btn" type="submit">सदस्यता लें</button>
+                            </div>
+                            <p class="text-white-50 small mt-2 hindi-text">हम आपकी गोपनीयता का सम्मान करते हैं। कभी भी सदस्यता समाप्त करें।</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title hindi-text">हमारे बारे में</h2>
+            
+            <!-- Company Story -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Our Team" class="img-fluid rounded">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4 hindi-text">हमारी कहानी</h3>
+                    <p class="hindi-text">2010 में स्थापित, अपना बड़ा बिज़नेस इंडिया भारत में व्यवसायों के लिए परिवर्तनकारी विकास समाधान प्रदान करने के लिए समर्पित एक अग्रणी सलाहकार फर्म के रूप में उभरा है।</p>
+                    <p class="hindi-text">हमारी यात्रा एक साधारण विचार के साथ शुरू हुई: भारतीय उद्यमियों को उनकी पूर्ण क्षमता तक पहुँचने में सहायता करना। आज, हमने 500+ व्यवसायों के विकास में योगदान दिया है और देश भर में उद्यमियों के लिए एक विश्वसनीय साथी बन गए हैं।</p>
+                    <div class="d-flex mt-4">
+                        <div class="me-4 text-center">
+                            <h4 class="text-primary">500+</h4>
+                            <p class="hindi-text">संतुष्ट ग्राहक</p>
+                        </div>
+                        <div class="me-4 text-center">
+                            <h4 class="text-primary">12+</h4>
+                            <p class="hindi-text">वर्षों का अनुभव</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-primary">50+</h4>
+                            <p class="hindi-text">विशेषज्ञ टीम</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vision and Mission -->
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-eye fa-2x text-primary mb-3"></i>
+                        <h4 class="hindi-text">हमारी दृष्टि</h4>
+                        <p class="hindi-text">भारत को वैश्विक व्यापार नेता बनाने में सहायता करने के लिए प्रत्येक व्यवसाय को उनकी पूर्ण क्षमता तक पहुँचने में सशक्त बनाना।</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-bullseye fa-2x text-primary mb-3"></i>
+                        <h4 class="hindi-text">हमारा मिशन</h4>
+                        <p class="hindi-text">व्यावहारिक रणनीतियों, विशेषज्ञ मार्गदर्शन और अनुकूलित समाधानों के माध्यम से व्यवसायों को स्थायी विकास प्राप्त करने में सहायता करना।</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm">
+                        <i class="fas fa-heart fa-2x text-primary mb-3"></i>
+                        <h4 class="hindi-text">हमारे मूल्य</h4>
+                        <p class="hindi-text">अखंडता, नवाचार, उत्कृष्टता और सहयोग हमारी प्रत्येक बातचीत और समाधान को सूचित करते हैं।</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team -->
+            <h3 class="text-center mb-5 hindi-text">हमारी विशेषज्ञ टीम</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team Member" class="team-img">
+                        <div class="p-3">
+                            <h5 class="mb-0 hindi-text">अरुण कुमार</h5>
+                            <p class="text-muted hindi-text">संस्थापक और सीईओ</p>
+                            <p class="small hindi-text">व्यापार रणनीति में 15+ वर्षों का अनुभव</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team Member" class="team-img">
+                        <div class="p-3">
+                            <h5 class="mb-0 hindi-text">नीता शर्मा</h5>
+                            <p class="text-muted hindi-text">विपणन निदेशक</p>
+                            <p class="small hindi-text">ब्रांडिंग और डिजिटल मार्केटिंग विशेषज्ञ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Team Member" class="team-img">
+                        <div class="p-3">
+                            <h5 class="mb-0 hindi-text">राहुल वर्मा</h5>
+                            <p class="text-muted hindi-text">वित्तीय सलाहकार</p>
+                            <p class="small hindi-text">वित्तीय योजना और विश्लेषण में विशेषज्ञ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-5">
+        <div class="container">
+            <h2 class="section-title hindi-text">सफलता की कहानियाँ</h2>
+            <p class="lead text-center mb-5 hindi-text">हमारे ग्राहकों ने हमारी रणनीतियों के साथ उल्लेखनीय परिणाम प्राप्त किए हैं</p>
+            
+            <div class="row g-4">
+                <!-- Case Study 1 -->
+                <div class="col-lg-6">
+                    <div class="case-study-card">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Case Study" class="img-fluid h-100">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="p-4">
+                                    <h4 class="hindi-text">हैंडीक्राफ्ट हब</h4>
+                                    <p class="hindi-text">एक छोटा सा हस्तशिल्प व्यवसाय जिसने 12 महीनों में अपना राजस्व 5 गुना बढ़ा लिया</p>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <h6 class="text-muted hindi-text">पहले</h6>
+                                            <p class="hindi-text">₹5 लाख/माह</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="fas fa-arrow-right text-primary fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-muted hindi-text">बाद में</h6>
+                                            <p class="hindi-text">₹25 लाख/माह</p>
+                                        </div>
+                                    </div>
+                                    <span class="stats-badge hindi-text">400% वृद्धि</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary d-block mt-3 hindi-text">पूरी कहानी पढ़ें</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="col-lg-6">
+                    <div class="case-study-card">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="img-fluid h-100">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="p-4">
+                                    <h4 class="hindi-text">टेक्नोवेशन</h4>
+                                    <p class="hindi-text">एक स्टार्टअप जिसने हमारे मार्गदर्शन में 18 महीनों में ग्राहक आधार 10 गुना बढ़ाया</p>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <h6 class="text-muted hindi-text">पहले</h6>
+                                            <p class="hindi-text">500 ग्राहक</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="fas fa-arrow-right text-primary fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-muted hindi-text">बाद में</h6>
+                                            <p class="hindi-text">5,000+ ग्राहक</p>
+                                        </div>
+                                    </div>
+                                    <span class="stats-badge hindi-text">900% वृद्धि</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary d-block mt-3 hindi-text">पूरी कहानी पढ़ें</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 3 -->
+                <div class="col-lg-6">
+                    <div class="case-study-card">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="img-fluid h-100">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="p-4">
+                                    <h4 class="hindi-text">आरोग्य फार्मेसी</h4>
+                                    <p class="hindi-text">फार्मास्युटिकल श्रृंखला जिसने हमारी बिक्री प्रशिक्षण से रूपांतरण दर में सुधार किया</p>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <h6 class="text-muted hindi-text">पहले</h6>
+                                            <p class="hindi-text">15% रूपांतरण</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="fas fa-arrow-right text-primary fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-muted hindi-text">बाद में</h6>
+                                            <p class="hindi-text">35% रूपांतरण</p>
+                                        </div>
+                                    </div>
+                                    <span class="stats-badge hindi-text">133% वृद्धि</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary d-block mt-3 hindi-text">पूरी कहानी पढ़ें</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 4 -->
+                <div class="col-lg-6">
+                    <div class="case-study-card">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Case Study" class="img-fluid h-100">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="p-4">
+                                    <h4 class="hindi-text">ग्रीन ईटिंग</h4>
+                                    <p class="hindi-text">जैविक रेस्तरां जिसने हमारे डिजिटल मार्केटिंग अभियानों के साथ ऑनलाइन उपस्थिति में क्रांति ला दी</p>
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <h6 class="text-muted hindi-text">पहले</h6>
+                                            <p class="hindi-text">100 वेब विज़िट/माह</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <i class="fas fa-arrow-right text-primary fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-muted hindi-text">बाद में</h6>
+                                            <p class="hindi-text">5,000+ विज़िट/माह</p>
+                                        </div>
+                                    </div>
+                                    <span class="stats-badge hindi-text">4900% वृद्धि</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary d-block mt-3 hindi-text">पूरी कहानी पढ़ें</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title hindi-text">व्यापार संसाधन</h2>
+            <p class="lead text-center mb-5 hindi-text">व्यापार वृद्धि के लिए नवीनतम युक्तियाँ, रणनीतियाँ और अंतर्दृष्टि</p>
+            
+            <div class="row g-4">
+                <!-- Blog 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Blog" class="blog-img">
+                        <div class="p-4">
+                            <span class="badge bg-primary mb-2 hindi-text">विपणन</span>
+                            <h5 class="hindi-text">2023 में डिजिटल मार्केटिंग में शीर्ष 5 रुझान</h5>
+                            <p class="small text-muted hindi-text"><i class="far fa-clock me-1"></i> 15 मई, 2023</p>
+                            <p class="hindi-text">अपने व्यवसाय के लिए नवीनतम डिजिटल मार्केटिंग रणनीतियों का लाभ उठाने के लिए इन शीर्ष रुझानों की खोज करें...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary hindi-text">पढ़ना जारी रखें</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80" alt="Blog" class="blog-img">
+                        <div class="p-4">
+                            <span class="badge bg-success mb-2 hindi-text">वित्त</span>
+                            <h5 class="hindi-text">छोटे व्यवसायों के लिए वित्तीय योजना गाइड</h5>
+                            <p class="small text-muted hindi-text"><i class="far fa-clock me-1"></i> 2 मई, 2023</p>
+                            <p class="hindi-text">अपने व्यवसाय की वित्तीय स्वास्थ्य सुनिश्चित करने के लिए इन आवश्यक युक्तियों और रणनीतियों को जानें...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary hindi-text">पढ़ना जारी रखें</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Blog" class="blog-img">
+                        <div class="p-4">
+                            <span class="badge bg-warning mb-2 hindi-text">लीडरशिप</span>
+                            <h5 class="hindi-text">अपनी टीम को सफलता के लिए कैसे सशक्त बनाएं</h5>
+                            <p class="small text-muted hindi-text"><i class="far fa-clock me-1"></i> 25 अप्रैल, 2023</p>
+                            <p class="hindi-text">अपनी टीम को प्रेरित करने, सशक्त बनाने और उन्हें उनकी पूर्ण क्षमता तक पहुँचने में मदद करने के लिए इन नेतृत्व युक्तियों को जानें...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary hindi-text">पढ़ना जारी रखें</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary hindi-text">सभी संसाधन देखें</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title hindi-text">संपर्क करें</h2>
+            <p class="lead text-center mb-5 hindi-text">हमें अपने व्यापार वृद्धि के लक्ष्यों पर चर्चा करने के लिए संपर्क करें</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="contact-card">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label hindi-text">आपका नाम</label>
+                                    <input type="text" class="form-control" id="name" placeholder="अपना नाम दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label hindi-text">ईमेल पता</label>
+                                    <input type="email" class="form-control" id="email" placeholder="अपना ईमेल दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label hindi-text">फोन नंबर</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="अपना फोन नंबर दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="subject" class="form-label hindi-text">विषय</label>
+                                    <select class="form-select" id="subject">
+                                        <option selected hindi-text">सामान्य जानकारी</option>
+                                        <option hindi-text">सेवा पूछताछ</option>
+                                        <option hindi-text">परामर्श बुकिंग</option>
+                                        <option hindi-text">अन्य</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label hindi-text">संदेश</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="अपना संदेश यहाँ लिखें..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary hindi-text">संदेश भेजें</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="contact-card h-100">
+                        <h4 class="mb-4 hindi-text">हमसे संपर्क करें</h4>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="hindi-text">पता</h5>
+                                <p class="hindi-text">व्यापार प्लाजा, 123 मुख्य सड़क<br>मुंबई, महाराष्ट्र 400001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="hindi-text">फोन</h5>
+                                <p class="hindi-text">+91 98765 43210</p>
+                                <p class="hindi-text">+91 98765 43211</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="hindi-text">ईमेल</h5>
+                                <p class="hindi-text">info@apnabadabusinessind.com</p>
+                                <p class="hindi-text">support@apnabadabusinessind.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h5 class="hindi-text">व्हाट्सएप</h5>
+                                <p class="hindi-text">+91 98765 43210</p>
+                                <a href="#" class="btn btn-sm btn-success mt-2 hindi-text"><i class="fab fa-whatsapp me-2"></i>व्हाट्सएप पर चैट करें</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5">
+                            <h5 class="mb-3 hindi-text">कार्य घंटे</h5>
+                            <p class="hindi-text">सोमवार - शुक्रवार: 9:00 पूर्वाह्न - 6:00 अपराह्न</p>
+                            <p class="hindi-text">शनिवार: 10:00 पूर्वाह्न - 2:00 अपराह्न</p>
+                            <p class="hindi-text">रविवार: बंद</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Consultation Section -->
+    <section id="book" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title hindi-text">परामर्श बुक करें</h2>
+            <p class="lead text-center mb-5 hindi-text">अपने व्यापार की संभावनाओं पर चर्चा करने के लिए हमारे विशेषज्ञों के साथ एक निःशुल्क परामर्श बुक करें</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="booking-form">
+                        <form>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="consult-name" class="form-label hindi-text">आपका नाम</label>
+                                    <input type="text" class="form-control" id="consult-name" placeholder="अपना नाम दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="consult-email" class="form-label hindi-text">ईमेल पता</label>
+                                    <input type="email" class="form-control" id="consult-email" placeholder="अपना ईमेल दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="consult-phone" class="form-label hindi-text">फोन नंबर</label>
+                                    <input type="tel" class="form-control" id="consult-phone" placeholder="अपना फोन नंबर दर्ज करें">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="consult-business" class="form-label hindi-text">व्यापार प्रकार</label>
+                                    <input type="text" class="form-control" id="consult-business" placeholder="अपने व्यापार का प्रकार दर्ज करें">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label hindi-text">पसंदीदा परामर्श प्रकार</label>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="consultType" id="type-online" checked>
+                                        <label class="form-check-label hindi-text" for="type-online">ऑनलाइन (वीडियो कॉल)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="consultType" id="type-phone">
+                                        <label class="form-check-label hindi-text" for="type-phone">फोन कॉल</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="consultType" id="type-office">
+                                        <label class="form-check-label hindi-text" for="type-office">कार्यालय में व्यक्तिगत</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label for="consult-date" class="form-label hindi-text">पसंदीदा तिथि</label>
+                                    <input type="date" class="form-control" id="consult-date">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="consult-time" class="form-label hindi-text">पसंदीदा समय</label>
+                                    <select class="form-select" id="consult-time">
+                                        <option selected hindi-text">समय चुनें</option>
+                                        <option hindi-text">9:00 पूर्वाह्न - 10:00 पूर्वाह्न</option>
+                                        <option hindi-text">10:00 पूर्वाह्न - 11:00 पूर्वाह्न</option>
+                                        <option hindi-text">11:00 पूर्वाह्न - 12:00 अपराह्न</option>
+                                        <option hindi-text">1:00 अपराह्न - 2:00 अपराह्न</option>
+                                        <option hindi-text">2:00 अपराह्न - 3:00 अपराह्न</option>
+                                        <option hindi-text">3:00 अपराह्न - 4:00 अपराह्न</option>
+                                        <option hindi-text">4:00 अपराह्न - 5:00 अपराह्न</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="form-label hindi-text">अपनी व्यापारिक चुनौतियों का वर्णन करें</label>
+                                <textarea class="form-control" rows="3" placeholder="अपनी व्यापारिक चुनौतियों और लक्ष्यों का संक्षिप्त विवरण दें"></textarea>
+                            </div>
+                            
+                            <div class="text-center mt-5">
+                                <button type="submit" class="btn btn-primary btn-lg hindi-text">अपॉइंटमेंट बुक करें</button>
+                                <p class="text-muted small mt-3 hindi-text">पुष्टि के लिए आपको एक ईमेल प्राप्त होगा</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="section-title hindi-text">सामान्य प्रश्न</h2>
+            <p class="lead text-center mb-5 hindi-text">अपना बड़ा बिज़नेस इंडिया के बारे में अक्सर पूछे जाने वाले प्रश्न</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="faq-item">
+                        <div class="faq-question hindi-text">
+                            <span>आपकी सेवाओं की लागत क्या है?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer hindi-text">
+                            <p>हमारी सेवाओं की लागत आपके व्यवसाय के आकार, आपकी विशिष्ट आवश्यकताओं और आपके द्वारा चुनी गई सेवाओं के पैकेज पर निर्भर करती है। हम निःशुल्क प्रारंभिक परामर्श प्रदान करते हैं जहाँ हम आपके लिए एक अनुकूलित उद्धरण तैयार कर सकते हैं।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question hindi-text">
+                            <span>एक परामर्श सत्र कितने समय तक चलता है?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer hindi-text">
+                            <p>प्रारंभिक परामर्श सत्र आमतौर पर 45-60 मिनट तक चलता है। निरंतर परामर्श सत्रों की अवधि आपकी आवश्यकताओं के आधार पर भिन्न हो सकती है, आमतौर पर 1-2 घंटे तक।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question hindi-text">
+                            <span>मैं अपने व्यवसाय के लिए सही सेवा कैसे चुनूं?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer hindi-text">
+                            <p>हमारी टीम आपके व्यवसाय का मूल्यांकन करने और आपके लक्ष्यों और चुनौतियों के आधार पर सर्वोत्तम सेवाओं की सिफारिश करने में आपकी सहायता करेगी। हमारे साथ अपना निःशुल्क परामर्श बुक करें, और हम आपको सही दिशा में मार्गदर्शन करेंगे।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question hindi-text">
+                            <span>क्या आप स्टार्टअप के लिए विशेष पैकेज प्रदान करते हैं?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer hindi-text">
+                            <p>हां, हमारे पास स्टार्टअप्स के लिए विशेष रूप से डिज़ाइन किए गए किफायती पैकेज हैं जिनमें व्यापार योजना विकास, बाजार अनुसंधान, प्रारंभिक विपणन रणनीतियाँ और फंडिंग मार्गदर्शन शामिल हैं।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question hindi-text">
+                            <span>परिणाम देखने में कितना समय लगता है?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer hindi-text">
+                            <p>परिणाम आपके व्यवसाय की वर्तमान स्थिति, लागू की गई रणनीतियों और आपके उद्योग पर निर्भर करते हैं। कुछ ग्राहकों को कुछ हफ्तों में प्रारंभिक सुधार दिखाई देते हैं, जबकि व्यापक परिवर्तनों के लिए 3-6 महीने लग सकते हैं। हम वास्तविक परिणाम सुनिश्चित करने के लिए मापने योग्य मील के पत्थर निर्धारित करने पर काम करते हैं।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="footer-title hindi-text">अपना बड़ा बिज़नेस इंडिया</h4>
+                    <p class="hindi-text">अपने व्यवसाय को बढ़ाने और दीर्घकालिक सफलता प्राप्त करने के लिए आवश्यक उपकरण और ज्ञान प्रदान करना।</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon me-2"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h4 class="footer-title hindi-text">लिंक</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none hindi-text">होम</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none hindi-text">हमारे बारे में</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none hindi-text">सेवाएं</a></li>
+                        <li class="mb-2"><a href="#case-studies" class="text-white-50 text-decoration-none hindi-text">सफलता की कहानियाँ</a></li>
+                        <li class="mb-2"><a href="#blog" class="text-white-50 text-decoration-none hindi-text">संसाधन</a></li>
+                        <li><a href="#contact" class="text-white-50 text-decoration-none hindi-text">संपर्क करें</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title hindi-text">सेवाएं</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 hindi-text">व्यापार वृद्धि रणनीति</li>
+                        <li class="mb-2 hindi-text">विपणन और ब्रांडिंग</li>
+                        <li class="mb-2 hindi-text">बिक्री प्रशिक्षण</li>
+                        <li class="mb-2 hindi-text">स्टार्टअप मार्गदर्शन</li>
+                        <li class="mb-2 hindi text">वित्तीय योजना</li>
+                        <li class="hindi-text">डिजिटल परिवर्तन</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4 class="footer-title hindi-text">संपर्क करें</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i><span class="hindi-text">मुंबई, महाराष्ट्र</span></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i><span class="hindi-text">+91 98765 43210</span></li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i><span class="hindi-text">info@apnabadabusinessind.com</span></li>
+                        <li><i class="fab fa-whatsapp me-2"></i><span class="hindi-text">+91 98765 43210</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="my-5 bg-light">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="hindi-text">&copy; 2023 अपना बड़ा बिज़नेस इंडिया. सर्वाधिकार सुरक्षित.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3 text-decoration-none hindi-text">गोपनीयता नीति</a>
+                    <a href="#" class="text-white-50 text-decoration-none hindi-text">उपयोग की शर्तें</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
